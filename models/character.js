@@ -1,8 +1,8 @@
 import mongoose from "mongoose;"
 const Schema = mongoose.Schema;
 
-let Character = new Schema({
-  id: Number,
+let character = new Schema({
+  _id: Number,
   name: String,
   status: String,
   species: String,
@@ -10,7 +10,7 @@ let Character = new Schema({
   gender: String,
   origin: {
     name: String,
-    url: String
+    url: String,
   },
   location: {
     name: String,
@@ -22,4 +22,4 @@ let Character = new Schema({
   created: String
 })
 
-export default mongoose.model("character", Character);
+export default mongoose.model("Character", character);

@@ -1,17 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-let connectionConfig = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}
+mongoose.set('returnOriginal', false)
+mongoose.set('strictQuery', false);
 
-mongoose.set('strictQuery', true)
+mongoose.connect('mongodb://127.0.0.1:27017/rick-and-morty-api').catch((err) => {
+  console.log(`Error connection to mongodb: ${err.message}`)
+});
 
-mongoose.connect('mongodb://127.0.0.1:27017/characters', connectionConfig)
-
-mongoose.connection.on('connected', () => console.log("Connected to database"))
-mongoose.connection.on('disconnected', () => console.log("Disconnected from database"))
-mongoose.connection.on('error', error => console.error("Database error", error))
-
+mongoose.connection.on("disconnected", () => {
+  console.log(`Disconnected from MongoDB!`)
+});
+  
+mongoose.connection.on("error", (err) => {
+   console.log(`MongoDB connection error: ${err}`)
+});
+  
 
 export default mongoose.connection
