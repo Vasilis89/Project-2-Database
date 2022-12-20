@@ -1,6 +1,6 @@
-import db from "../db/connection.js";
+import db from "./connection.js";
 import Character from "../models/character.js";
-import characters from "./characters.json" assert { type: "json" };
+import characters from "./character.json" assert { type: "json" };
 
 const insertData = async () => {
   await db.dropDatabase()

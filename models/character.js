@@ -22,4 +22,4 @@ let Character = new Schema({
   created: String
 })
 
-export default mongoose.model("characters", Character);
+export default mongoose.model("character", Character);
