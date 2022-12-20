@@ -1,14 +1,14 @@
 import Character from "../models/character.js";
 
-// export const getCharacters = async (req, res) => {
-//   try {
-//     const characters = await Character.find();
-//     res.json(characters);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: error.message });
-//   }
-// };
+export const getCharacters = async (req, res) => {
+  try {
+    const characters = await Character.find();
+    res.json(characters);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+};
 
 export const getCharacter = async (req, res) => {
   try {
