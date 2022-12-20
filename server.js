@@ -20,4 +20,3 @@ db.on("connected", () => {
     console.log(`Express server is running in development on http://localhost:${PORT}`)
   })
 });
-
