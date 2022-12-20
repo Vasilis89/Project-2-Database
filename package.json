@@ -1,6 +1,5 @@
 {
   "name": "project_two",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -21,5 +20,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "type": "module"
 }
