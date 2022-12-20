@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 let Character = new Schema({
-  _id: Number,
   name: String,
   status: String,
   species: String,
