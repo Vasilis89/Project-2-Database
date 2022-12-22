@@ -4,7 +4,7 @@ import characterRoute from "./characters.js";
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.send("This is the route")
+  res.redirect('/characters')
 });
 
 router.use("/characters", characterRoute)
