@@ -17,6 +17,6 @@ db.on("connected", () => {
   console.clear();
   console.log("Connected to MongoDB");
   app.listen(port, () => {
-    console.log(`Express server is running in development on port ${Port}`);
+    console.log(`Express server is running in development on port ${port}`);
   });
 });
