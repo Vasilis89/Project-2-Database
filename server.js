@@ -5,7 +5,7 @@ import logger from 'morgan';
 import routes from "./routes/index.js"
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.Port || 3000;
 
 app.use(express.json());
 app.use(cors());
@@ -17,6 +17,6 @@ db.on("connected", () => {
   console.clear();
   console.log("Connected to MongoDB");
   app.listen(PORT, () => {
-    console.log(`Express server is running in development on http://localhost:${PORT}`)
+    console.log(`Express server is running in development on port ${PORT}`)
   })
 });

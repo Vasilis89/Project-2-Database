@@ -3,7 +3,9 @@ import mongoose from 'mongoose';
 mongoose.set('returnOriginal', false)
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://127.0.0.1:27017/rick-and-morty-api').catch((err) => {
+const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/project_two'
+
+mongoose.connect(url).catch((err) => {
   console.log(`Error connection to mongodb: ${err.message}`)
 });
 
